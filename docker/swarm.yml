@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  backend:
+    image: neuracoin:latest
+    ports:
+      - "8000:8000"
+    deploy:
+      replicas: 3
+  mongo:
+    image: mongo:7.0
+    ports:
+      - "27017:27017"
+  redis:
+    image: redis:7.2
+    ports:
+      - "6379:6379"
